@@ -4,14 +4,14 @@ using UnityEngine;
 public class Snake : MonoBehaviour
 {
     private Vector2 _direction = Vector2.right;
-    private List<Transform> _segments;
+    private List<Transform> _segments = new List<Transform>();
 
     public Transform segmentPrefab;
+    public int initialSize = 2;
 
     private void Start()
     {
-        _segments = new List<Transform>();
-        _segments.Add(transform);
+        ResetState();
     }
 
     private void Update()
@@ -48,6 +48,24 @@ public class Snake : MonoBehaviour
         );
     }
 
+    private void ResetState()
+    {
+        for (int i = 1; i < _segments.Count; i++)
+        {
+            Destroy(_segments[i].gameObject);
+        }
+
+        _segments.Clear();
+        _segments.Add(transform);
+
+        for (int i = 0; i < initialSize; i++)
+        {
+            _segments.Add(Instantiate(segmentPrefab));
+        }
+
+        transform.position = Vector3.zero;
+    }
+
     private void Grow()
     {
         var segment = Instantiate(segmentPrefab);
@@ -61,6 +79,10 @@ public class Snake : MonoBehaviour
         if (other.CompareTag("Food"))
         {
             Grow();
+        }
+        else if (other.CompareTag("Obstacle"))
+        {
+            ResetState();
         }
     }
 }
