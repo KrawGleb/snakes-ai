@@ -1,0 +1,65 @@
+{
+    "Snake": {
+        "checkpoints": [
+            {
+                "steps": 525427,
+                "file_path": "results\\ppo\\Snake\\Snake-525427.onnx",
+                "reward": null,
+                "creation_time": 1669837562.0918145,
+                "auxillary_file_paths": [
+                    "results\\ppo\\Snake\\Snake-525427.pt"
+                ]
+            },
+            {
+                "steps": 999996,
+                "file_path": "results\\ppo\\Snake\\Snake-999996.onnx",
+                "reward": -3.5469999462366104,
+                "creation_time": 1669839044.220038,
+                "auxillary_file_paths": [
+                    "results\\ppo\\Snake\\Snake-999996.pt"
+                ]
+            },
+            {
+                "steps": 1499987,
+                "file_path": "results\\ppo\\Snake\\Snake-1499987.onnx",
+                "reward": 71.56113422811032,
+                "creation_time": 1669840642.758396,
+                "auxillary_file_paths": [
+                    "results\\ppo\\Snake\\Snake-1499987.pt"
+                ]
+            },
+            {
+                "steps": 1999970,
+                "file_path": "results\\ppo\\Snake\\Snake-1999970.onnx",
+                "reward": 94.63756790094905,
+                "creation_time": 1669842493.0315588,
+                "auxillary_file_paths": [
+                    "results\\ppo\\Snake\\Snake-1999970.pt"
+                ]
+            },
+            {
+                "steps": 2361148,
+                "file_path": "results\\ppo\\Snake\\Snake-2361148.onnx",
+                "reward": 118.12961452007293,
+                "creation_time": 1669843799.895529,
+                "auxillary_file_paths": [
+                    "results\\ppo\\Snake\\Snake-2361148.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2361148,
+            "file_path": "results\\ppo\\Snake.onnx",
+            "reward": 118.12961452007293,
+            "creation_time": 1669843799.895529,
+            "auxillary_file_paths": [
+                "results\\ppo\\Snake\\Snake-2361148.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.7.0+cu110"
+    }
+}
